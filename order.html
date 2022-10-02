@@ -24,28 +24,39 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
     </nav>
   </header>
 
-  <br><br><br><br><br><br>
-  <form action="confirmation.html" >
-    <section name="Contact">
-      
-      <input type="text" id="firstName" name="prenom" pattern="[9]+"/>
-      <label>Prenom</label><br>
-      <input type="text" id="LastName" name="nom"/>
-      <label>Nom</label><br>
-      <input type="text" id="email" name="email"/>
-      <label>email</label><br>
-      <input type="text" id="phone" name="phone number"/>
-      <label>Phone number</label><br>
-    </section>
+  <main>
+    <h1>Commander</h1>
 
-    <section name="Paiement">
-      <input type="text" id="Creditcard" name="fullname"/>
-      <input type="text" id="DateExpiration" name="fullname"/>
-      <button>Payer</button>
-    </section>
+    <form action="confirmation.html" method="post">
+      <section>
+        <h2>Contact</h2>
 
-    <input type="submit" value="submit"/>
-  </form>
+        <label for="firstname">Prénom</label><br>
+        <input type="text" id="firstname" name="prenom" size="22" required><br><br>
+
+        <label for="lastname">Nom</label><br>
+        <input type="text" id="lastname" name="nom" size="22" required><br><br>
+        
+        <label for="email">Adresse courriel</label><br>
+        <input type="text" id="email" name="courriel" size="22" placeholder="nom@exemple.com" required><br><br>
+        
+        <label for="phone">Numéro de téléphone</label><br>
+        <input type="text" id="phone" name="telephone" size="22" maxlength="16" placeholder="X XXX XXX XXXX" required>
+      </section>
+  
+      <section>
+        <h2>Paiement</h2>
+        
+        <label for="creditcard">Numéro de carte de crédit</label><br>
+        <input type="text" id="creditcard" name="carte" size="22" maxlength="19" placeholder="XXXX XXXX XXXX XXXX" required><br><br>
+
+        <label for="creditcardexpiry">Date d'expiration</label><br>
+        <input type="date" id="creditcardexpiry" name="expiration" required><br><br><br>
+      </section>
+  
+      <input type="submit" value="Payer"/>
+    </form>
+  </main>
 
   <footer>
     <p>Jianxin You 20134401</p>
