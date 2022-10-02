@@ -11,9 +11,10 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
 </head>
 
 <body>
-
   <header>
-    <img src="imgs/logo.svg" href="index.html">
+    <a href="index.html">
+      <img src="imgs/logo.svg">
+    </a>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="products.html">Produits</a>
@@ -23,40 +24,59 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
   </header>
 
   <main>
-    <table>
-      <tr>
-        <td>Nom</td><td>Prix Unitaire</td><td>Quantite</td><td>Prix</td>
-      </tr>
-      <tr>
-        <td><button type="button">X</button></td>
-        <td>APPle-TV</td>
-        <td>2.00</td>
-        <td><button type="button">-</button></td>
-        <td>1</td>
-        <td><button type="button">+</button></td>
-        <td>2.00</td>
-      </tr>
+    <h1>Panier</h1>
+    <form action="" method="post">
+      <table>
+        <thead>
+          <th></th>
+          <td>Nom</td>
+          <td>Prix Unitaire</td>
+          <th></th>
+          <td>Quantite</td>
+          <th></th>
+          <td>Prix</td>
+        </thead>
 
-      <tr>
-        <td><button type="button">X</button></td>
-        <td>APPle-TV</td>
-        <td>2.00</td>
-        <td><button type="button">-</button></td>
-        <td>1</td>
-        <td><button type="button">+</button></td>
-        <td>2.00</td>
-      </tr>
+        <tbody>
+          <tr>
+            <td><button name="delete">X</button></td>
+            <td><a href="product.html">Apple TV</a></td>
+            <td>2.00$</td>
+            <td><button name="minus">-</button></td>
+            <td>1</td>
+            <td><button name="plus">+</button></td>
+            <td>2.00$</td>
+          </tr>
+    
+          <tr>
+            <td><button name="delete">X</button></td>
+            <td><a href="product.html">Apple TV</a></td>
+            <td>2.00$</td>
+            <td><button name="minus">-</button></td>
+            <td>1</td>
+            <td><button name="plus">+</button></td>
+            <td>2.00$</td>
+          </tr>
+    
+          <tr>
+            <td><button name="delete">X</button></td>
+            <td><a href="product.html">Apple TV</a></td>
+            <td>2.00$</td>
+            <td><button name="minus">-</button></td>
+            <td>1</td>
+            <td><button name="plus">+</button></td>
+            <td>2.00$</td>
+          </tr>
+        </tbody>
 
-      <tr>
-        <td><button type="button">X</button></td>
-        <td>APPle-TV</td>
-        <td>2.00</td>
-        <td><button type="button">-</button></td>
-        <td>1</td>
-        <td><button type="button">+</button></td>
-        <td>2.00</td>
-      </tr>
-    </table>
+        
+      </table>
+
+      <p>Total: 6.00$</p>
+      <input type="reset" value="Vider le panier">
+      <a href="order.html">Commander</a>
+    </form>
+    
     
   </main>
 
