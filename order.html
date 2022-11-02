@@ -32,26 +32,26 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
         <h2>Contact</h2>
 
         <label for="firstname">Prénom</label><br>
-        <input type="text" id="firstname" name="prenom" size="22" required><br><br>
+        <input id="firstname" name="prenom" type="text" size="22" placeholder="Prénom" required><br><br>
 
         <label for="lastname">Nom</label><br>
-        <input type="text" id="lastname" name="nom" size="22" required><br><br>
+        <input id="lastname" name="nom" type="text" size="22" placeholder="Nom" required><br><br>
         
         <label for="email">Adresse courriel</label><br>
-        <input type="text" id="email" name="courriel" size="22" placeholder="nom@exemple.com" required><br><br>
+        <input id="email" name="courriel" type="email" size="22" placeholder="nom@exemple.com" required><br><br>
         
         <label for="phone">Numéro de téléphone</label><br>
-        <input type="text" id="phone" name="telephone" size="22" maxlength="16" placeholder="X XXX XXX XXXX" required>
+        <input id="phone" name="telephone" type="tel" size="22" maxlength="16" placeholder="#-###-###-####" required>
       </section>
   
       <section>
         <h2>Paiement</h2>
         
         <label for="creditcard">Numéro de carte de crédit</label><br>
-        <input type="text" id="creditcard" name="carte" size="22" maxlength="19" placeholder="XXXX XXXX XXXX XXXX" required><br><br>
+        <input id="creditcard" name="carte" type="text" size="22" maxlength="19" placeholder="XXXX XXXX XXXX XXXX" required><br><br>
 
-        <label for="creditcardexpiry">Date d'expiration</label><br>
-        <input type="date" id="creditcardexpiry" name="expiration" required><br><br><br>
+        <label for="creditcardexpiry">Date d'expiration (MM/AA)</label><br>
+        <input id="creditcardexpiry" name="expiration" type="text" placeholder="MM/AA" required><br><br><br>
       </section>
   
       <input type="submit" value="Payer"/>
