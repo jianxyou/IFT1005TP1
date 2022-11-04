@@ -1,2 +1,109 @@
 /* Jianxin You 20134401
 Hoang-Thi-Thi Cynthia Phan 20220019 */
+
+/* body styles */
+
+body {
+    margin: 0%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 auto;
+    
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+.header--content, main {
+    width: 1160px;
+    max-width: 1160px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    display: flex;
+}
+
+header, footer {
+    width: 100%;
+}
+
+/* header styles */
+
+header {
+    height: 60px;
+    background-color: #14597f;
+
+    border-bottom: 1px;
+    border-bottom-color: #0b2d3d;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.header--content {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 45px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav > a {
+    padding: 10px 20px;
+}
+
+nav > a:link, nav > a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #1fb5e9;
+    border-radius: 4px;
+}
+
+.shopping-cart {
+    width: fit-content;
+}
+
+.fa-shopping-cart {
+    color: #14597f;
+}
+
+.count {
+    background-color: #d9534f;
+    padding: 5px 9px;
+    border-radius: 100px;
+    
+    position: relative;
+    left: -12pt;
+    top: 10pt;
+    
+    font-size: 12px;
+    color: white;
+}
+
+/* main styles */
+
+main {
+    
+}
+
+/* footer styles */
+
+footer {
+    height: 70px;
+}
+
+/* links styles */
+/* buttons styles */
+/* border styles */
+/* table styles */
+/* form styles */
