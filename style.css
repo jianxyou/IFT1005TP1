@@ -85,7 +85,7 @@ main {
     flex: 1 0 auto;
 }
 
-.header--content, .home, .products, .product {
+main, .header--content, .contact--article {
     width: 1160px;
     max-width: 1160px;
     padding-left: 20px;
@@ -113,10 +113,6 @@ footer {
 
     text-align: center;
 }
-
-/* links styles */
-
-/* TODO */
 
 /* buttons styles */
 
@@ -169,8 +165,6 @@ footer {
     flex: 1 0 25%;
     margin: 15px;
     height: 300px;
-
-    /* TODO */
 }
 
 .items img {
@@ -203,3 +197,17 @@ footer {
 }
 
 /* contact.html styles */
+
+.contact--article, .contact--content {
+    display: flex;
+}
+
+.contact--article {
+    flex-direction: column;
+}
+
+.contact--column {
+    width: 33.33%;
+    
+    text-align: center;
+}
