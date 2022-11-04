@@ -20,7 +20,7 @@ body {
     color: black;
 }
 
-.header--content, .home {
+.header--content, .home, .products {
     width: 1160px;
     max-width: 1160px;
     padding-left: 20px;
@@ -118,19 +118,15 @@ footer {
 
 /* links styles */
 
-/*TODO*/
+/* TODO */
 
 /* buttons styles */
 
-/*TODO*/
-
-/* border styles */
-
-/*TODO*/
+/* TODO */
 
 /* form styles */
 
-/*TODO*/
+/* TODO */
 
 /* index.html styles */
 
@@ -143,6 +139,43 @@ footer {
     height: 400px;
 }
 
-/* products page styles */
+/* products.html styles */
 
+.products > aside {
+    width: 25%;
+    padding-right: 30px;
+}
 
+#product-list {
+    width: 75%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.products--title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products--items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.items {
+    flex: 1 0 25%;
+    margin: 15px;
+    height: 300px;
+
+    /* TODO */
+}
+
+.items img {
+    height: 200px;
+}
+
+.items p {
+    text-align: right;
+}
