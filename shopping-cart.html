@@ -34,56 +34,63 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
     </section>
   </header>
 
-  <main>
+  <main class="shopping">
     <h1>Panier</h1>
-    <form action="" method="post">
-      <table>
+
+    <form class="shopping--content" action="" method="post">
+      <table class="shopping--border" cellpadding="5" cellspacing="0">
         <thead>
-          <th></th>
-          <td>Nom</td>
-          <td>Prix Unitaire</td>
-          <th></th>
-          <td>Quantite</td>
-          <th></th>
-          <td>Prix</td>
+          <th class="shopping--border column-delete"></th>
+          <th class="shopping--border column-product">Produit</th>
+          <th class="shopping--border column-unit-price">Prix Unitaire</th>
+          <th class="shopping--border column-plus-minus"></th>
+          <th class="shopping--border column-quantity">Quantité</th>
+          <th class="shopping--border column-plus-minus"></th>
+          <th class="shopping--border column-price">Prix</th>
         </thead>
 
         <tbody>
           <tr>
             <td><button name="delete">X</button></td>
-            <td><a href="product.html">Apple TV</a></td>
+            <!-- TODO add style to .shopping--link -->
+            <td class="shopping--link"><a href="product.html">Apple TV</a></td>
             <td>2.00$</td>
-            <td><button name="minus">-</button></td>
-            <td>1</td>
-            <td><button name="plus">+</button></td>
-            <td>2.00$</td>
+            <!-- TODO add style to .btn--plus-minus -->
+            <td><button class="btn--plus-minus" name="minus">-</button></td>
+            <td class="column-quantity">1</td>
+            <td><button class="btn--plus-minus" name="plus">+</button></td>
+            <td class="column-price">2.00$</td>
           </tr>
     
           <tr>
             <td><button name="delete">X</button></td>
-            <td><a href="product.html">Apple TV</a></td>
+            <td class="shopping--link"><a href="product.html">Apple TV</a></td>
             <td>2.00$</td>
-            <td><button name="minus">-</button></td>
-            <td>1</td>
-            <td><button name="plus">+</button></td>
-            <td>2.00$</td>
+            <td><button class="btn--plus-minus" name="minus">-</button></td>
+            <td class="column-quantity">1</td>
+            <td><button class="btn--plus-minus" name="plus">+</button></td>
+            <td class="column-price">2.00$</td>
           </tr>
     
           <tr>
             <td><button name="delete">X</button></td>
-            <td><a href="product.html">Apple TV</a></td>
+            <td class="shopping--link"><a href="product.html">Apple TV</a></td>
             <td>2.00$</td>
-            <td><button name="minus">-</button></td>
-            <td>1</td>
-            <td><button name="plus">+</button></td>
-            <td>2.00$</td>
+            <td><button class="btn--plus-minus" name="minus">-</button></td>
+            <td class="column-quantity">1</td>
+            <td><button class="btn--plus-minus" name="plus">+</button></td>
+            <td class="column-price">2.00$</td>
           </tr>
         </tbody>
       </table>
 
-      <p>Total: 6.00$</p>
-      <input type="reset" value="Vider le panier">
-      <a href="order.html">Commander</a>
+      <p class="shopping--total">Total: <strong>6.00$</strong></p>
+      <div class="btn--reset-order">
+        <input class="btn" type="reset" value="Vider le panier">
+        <a href="order.html">
+          <button class="btn">Commander</button>
+        </a>
+      </div>
     </form>
   </main>
 

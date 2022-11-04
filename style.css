@@ -82,6 +82,8 @@ nav > a:link, nav > a:visited {
 /* main styles */
 
 main {
+    margin-bottom: 50px;
+
     flex: 1 0 auto;
 }
 
@@ -210,6 +212,52 @@ footer {
     width: 33.33%;
     
     text-align: center;
+}
+
+/* shopping-cart.html styles */
+
+.shopping {
+    flex-direction: column;
+}
+
+.shopping--border {
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.column-delete {
+    width: 30px;
+}
+
+.column-product {
+    width: 40%;
+}
+
+.column-unit-price {
+    width: 25%;
+}
+
+.column-plus-minus {
+    width: 1%;
+}
+
+.column-quantity {
+    width: 5%;
+
+    text-align: center;
+}
+
+.column-product, .column-unit-price {
+    text-align: left;
+}
+
+.column-price, .shopping--total {
+    text-align: right;
+}
+
+.btn--reset-order {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* order.html styles */
