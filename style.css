@@ -20,7 +20,7 @@ body {
     color: black;
 }
 
-.header--content, main {
+.header--content, .home {
     width: 1160px;
     max-width: 1160px;
     padding-left: 20px;
@@ -29,7 +29,7 @@ body {
     display: flex;
 }
 
-header, footer, .main--content {
+header, footer, .home--content {
     width: 100%;
 }
 
@@ -100,15 +100,6 @@ main {
     flex: 1 0 auto;
 }
 
-.main--content {
-    display: flex;
-    justify-content: space-between;
-}
-
-.main--content > img {
-    height: 400px;
-}
-
 /* footer styles */
 
 footer {
@@ -137,10 +128,21 @@ footer {
 
 /*TODO*/
 
-/* table styles */
-
-/*TODO*/
-
 /* form styles */
 
 /*TODO*/
+
+/* index.html styles */
+
+.home--content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home--content > img {
+    height: 400px;
+}
+
+/* products page styles */
+
+
