@@ -265,3 +265,17 @@ footer {
 .order {
     flex-direction: column;
 }
+
+.order--content, .order--pay {
+    display: flex;
+}
+
+.order--column {
+    padding-right: 0px;
+}
+
+.order--pay {
+    justify-content: end;
+}
+
+/* confirmation.html styles */
