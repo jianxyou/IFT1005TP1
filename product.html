@@ -34,20 +34,24 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
     </section>
   </header>
 
-  <main>
-    <section>
-      <h1>Apple TV</h1>
-      <img src="imgs/apple-tv.png">
-      <h2>249.99$</h2>
-      <p>
-        L'Apple TV est un appareil conçu par Apple qui permet la communication sans fil entre un ordinateur et un téléviseur. 
-        Il est disponible depuis fin mars 2007 dans sa première version. 
-        L'appareil ressemble alors par sa forme à un Mac mini, bien qu'il ne fasse que la moitié de sa hauteur. 
-        Il communique par réseau sans fil ou Ethernet, avec un appareil iOS ou avec un ordinateur (sous Mac OS X ou sous Windows) par le biais du logiciel iTunes, permettant ainsi de diffuser le contenu vidéo et audio sur le téléviseur, via éventuellement un amplificateur audio-vidéo. 
-        (<a href='https://fr.wikipedia.org/wiki/Apple_TV' target='_blank'>Wikipédia</a>)
-      </p>
+  <main class="product">
+    <h1>Apple TV</h1>
 
-      <section>
+    <div class="product--content">
+      <div class="column">
+        <img src="imgs/apple-tv.png">
+      </div>
+
+      <div class="column">
+        <h3>Description</h3>
+        <p>
+          L'Apple TV est un appareil conçu par Apple qui permet la communication sans fil entre un ordinateur et un téléviseur. 
+          Il est disponible depuis fin mars 2007 dans sa première version. 
+          L'appareil ressemble alors par sa forme à un Mac mini, bien qu'il ne fasse que la moitié de sa hauteur. 
+          Il communique par réseau sans fil ou Ethernet, avec un appareil iOS ou avec un ordinateur (sous Mac OS X ou sous Windows) par le biais du logiciel iTunes, permettant ainsi de diffuser le contenu vidéo et audio sur le téléviseur, via éventuellement un amplificateur audio-vidéo. 
+          (<a href='https://fr.wikipedia.org/wiki/Apple_TV' target='_blank'>Wikipédia</a>)
+        </p>
+    
         <h3>Caractéristiques</h3>
         <ul>
           <li>
@@ -66,13 +70,18 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
             Réseau: Wi-Fi (802.11a/b/g/n/ac), 10/100 Ethernet, Bluetooth, AirPlay
           </li>
         </ul>
-      </section>
-    </section>
-  
-    <form action="" method="post">
-      <input type="number" name="quantity" value="1" min="0" pattern="[123]" >
-      <button>Ajouter</button>
-    </form>
+
+        <div class="product--form">
+          <p>Prix: <strong>249.99 $</strong></p>
+          <form action="" method="post">
+            <label for="product-quantity">Quantité:</label>
+            <!-- TODO add style to .form-control -->
+            <input id="product-quantity" class="form-control" type="number" name="quantity" min="1" max="99" step="1" value="1">
+            <input class="btn" type="submit" value="Ajouter"></submit>
+          </form>
+        </div>
+      </div>
+    </div>
   </main>
   
   <footer>

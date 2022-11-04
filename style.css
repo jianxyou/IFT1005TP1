@@ -7,8 +7,6 @@ html, body {
     height: 100%;
 }
 
-
-
 body {
     margin: 0%;
     
@@ -18,15 +16,6 @@ body {
     
     font-family: Arial, sans-serif;
     color: black;
-}
-
-.header--content, .home, .products {
-    width: 1160px;
-    max-width: 1160px;
-    padding-left: 20px;
-    padding-right: 20px;
-    
-    display: flex;
 }
 
 header, footer, .home--content {
@@ -98,6 +87,19 @@ nav > a:link, nav > a:visited {
 
 main {
     flex: 1 0 auto;
+}
+
+.header--content, .home, .products, .product {
+    width: 1160px;
+    max-width: 1160px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    display: flex;
+}
+
+.column {
+    width: 50%;
 }
 
 /* footer styles */
@@ -178,4 +180,27 @@ footer {
 
 .items p {
     text-align: right;
+}
+
+/* product.html styles */
+
+.product {
+    display: flex;
+    flex-direction: column;
+}
+
+.product--content {
+    display: flex;
+}
+
+.column > p {
+    text-align: justify;
+}
+
+.product--form {
+    border-top: 2px dotted lightgrey;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
