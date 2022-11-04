@@ -211,3 +211,9 @@ footer {
     
     text-align: center;
 }
+
+/* order.html styles */
+
+.order {
+    flex-direction: column;
+}
