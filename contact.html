@@ -8,37 +8,68 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
 <head>
   <meta charset="UTF-8">
   <title>OnlineShop - Contact</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 </head>
 
 <body>
   <header>
-    <a href="index.html">
-      <img src="imgs/logo.svg" alt="Logo du site web">
-    </a>
-
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="products.html">Produits</a>
-      <a href="contact.html">Contact</a>
-      <a href="shopping-cart.html">Panier</a>
-    </nav>
+    <section class="header--content">
+      <a href="./index.html">
+        <img class="logo" src="./imgs/logo.svg" alt="Logo du site web">
+      </a> 
+  
+      <nav>
+        <a href="./index.html">Accueil</a>
+        <a href="./products.html">Produits</a>
+        <a class="active" href="./contact.html">Contact</a>
+        <a class="shopping-cart" href="./shopping-cart.html" title="Panier">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+            <i class="fa fa-shopping-cart fa-stack-1x"></i>
+          </span>
+          <span class="count"> 3 </span>
+        </a>
+      </nav>
+    </section>
   </header>
 
-  <main>
-    <section>
-      <article>
-        <h1>Contactez-Nous</h1>
-        <p>Adresse courriel: <a href="mailto:OnlineShop@email.com">OnlineShop@email.com</a></p>
-        <p>Téléphone: <a href="+10000000000">+1 (000) 000-0000</a></p>
-      </article>
-    </section>
+  <main class="contact">
+    <article class="contact--article">
+      <h1>Contact</h1>
+      <p>Contactez-nous aux coordonnées suivantes.</p>
+
+      <!-- TODO add style to .contact--content -->
+      <div class="contact--content">
+        <div class="contact--column">
+          <!-- TODO add style to .fa-mobile-alt -->
+          <p class="fa fa-mobile-alt"></p>
+          <!-- TODO add style to (.contact--column a) -->
+          <p><a href="+1 (000) 000-0000">+1 (000) 000-0000</a></p>
+        </div>
+
+        <div class="contact--column">
+          <!-- TODO add style to .fa-map-marker-alt -->
+          <p class="fa fa-map-marker-alt"></p>
+          <p>
+            2900 blvd Édouard Montpetit<br>
+            Montréal (Québec)<br>
+            H3T 1J4
+          </p>
+        </div>
+
+        <div class="contact--column">
+          <!-- TODO add style to .fa-envelope -->
+          <p class="fa fa-envelope"></p>
+          <p><a href="mailto:OnlineShop@email.com">OnlineShop@email.com</a></p>
+        </div>
+      </div>
+    </article>
   </main>
 
   <footer>
-    <p>Jianxin You 20134401</p>
-    <p>Hoang-Thi-Thi Cynthia Phan 20220019</p>
+    <small>Jianxin You 20134401</small>
+    <small>Hoang-Thi-Thi Cynthia Phan 20220019</small>
   </footer>
 
 </body>

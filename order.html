@@ -8,61 +8,82 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
 <head>
   <meta charset="UTF-8">
   <title>OnlineShop - Commande</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 </head>
 
 <body>
   <header>
-    <a href="index.html">
-      <img src="imgs/logo.svg" alt="Logo du site web">
-    </a>
-
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="products.html">Produits</a>
-      <a href="contact.html">Contact</a>
-      <a href="shopping-cart.html">Panier</a>
-    </nav>
+    <section class="header--content">
+      <a href="./index.html">
+        <img class="logo" src="./imgs/logo.svg" alt="Logo du site web">
+      </a> 
+  
+      <nav>
+        <a href="./index.html">Accueil</a>
+        <a href="./products.html">Produits</a>
+        <a href="./contact.html">Contact</a>
+        <a class="shopping-cart" href="./shopping-cart.html" title="Panier">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+            <i class="fa fa-shopping-cart fa-stack-1x"></i>
+          </span>
+          <span class="count"> 3 </span>
+        </a>
+      </nav>
+    </section>
   </header>
 
-  <main>
+  <main class="order">
     <h1>Commander</h1>
 
-    <form action="confirmation.html" method="post">
-      <section>
+    <form action="./confirmation.html" method="post">
+      <section class="order--contact">
         <h2>Contact</h2>
-
-        <label for="firstname">Prénom</label><br>
-        <input id="firstname" name="prenom" type="text" size="22" placeholder="Prénom" required><br><br>
-
-        <label for="lastname">Nom</label><br>
-        <input id="lastname" name="nom" type="text" size="22" placeholder="Nom" required><br><br>
-        
-        <label for="email">Adresse courriel</label><br>
-        <input id="email" name="courriel" type="email" size="22" placeholder="nom@exemple.com" required><br><br>
-        
-        <label for="phone">Numéro de téléphone</label><br>
-        <input id="phone" name="telephone" type="tel" size="22" maxlength="16" placeholder="#-###-###-####" required>
-      </section>
   
-      <section>
+        <div class="order--content">
+          <div class="column order--column">
+            <label for="first-name"><strong>Prénom</strong></label><br>
+            <input class="form-control" id="first-name" name="prenom" type="text" size="83" placeholder="Prénom" required><br><br>
+              
+            <label for="email"><strong>Adresse courriel</strong></label><br>
+            <input class="form-control" id="email" name="courriel" type="email" size="83" placeholder="nom@exemple.com" required><br><br>
+          </div>
+    
+          <div class="column">
+            <label for="last-name"><strong>Nom</strong></label><br>
+            <input class="form-control" id="last-name" name="nom" type="text" size="85" placeholder="Nom" required><br><br>
+              
+            <label for="phone"><strong>Téléphone</strong></label><br>
+            <input class="form-control" id="phone" name="telephone" type="tel" size="85" maxlength="16" placeholder="#-###-###-####" required>
+          </div>
+        </div>
+      </section>
+    
+      <section class="order--payment">
         <h2>Paiement</h2>
-        
-        <label for="creditcard">Numéro de carte de crédit</label><br>
-        <input id="creditcard" name="carte" type="text" size="22" maxlength="19" placeholder="XXXX XXXX XXXX XXXX" required><br><br>
-
-        <label for="creditcardexpiry">Date d'expiration (MM/AA)</label><br>
-        <input id="creditcardexpiry" name="expiration" type="text" placeholder="MM/AA" required><br><br><br>
+          
+        <div class="order--content">
+          <div class="column order--column">
+            <label for="credit-card"><strong>Numéro de carte de crédit</strong></label><br>
+            <input class="form-control" id="credit-card" name="carte" type="text" size="83" maxlength="19" placeholder="XXXX XXXX XXXX XXXX" required><br><br>
+          </div>
+    
+          <div class="column">
+            <label for="credit-card-expiry"><strong>Date d'expiration <small>(MM/AA)</small></strong></label><br>
+            <input class="form-control" id="credit-card-expiry" name="expiration" type="text" placeholder="MM/AA" size="85" required><br><br><br>
+          </div>
+        </div>
       </section>
-  
-      <input type="submit" value="Payer"/>
+      <div class="order--pay">
+        <input class="btn" type="submit" value="Payer"/>
+      </div>
     </form>
   </main>
 
   <footer>
-    <p>Jianxin You 20134401</p>
-    <p>Hoang-Thi-Thi Cynthia Phan 20220019</p>
+    <small>Jianxin You 20134401</small>
+    <small>Hoang-Thi-Thi Cynthia Phan 20220019</small>
   </footer>
 
 </body>

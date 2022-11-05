@@ -1,2 +1,281 @@
 /* Jianxin You 20134401
 Hoang-Thi-Thi Cynthia Phan 20220019 */
+
+/* body styles */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+header, footer {
+    width: 100%;
+}
+
+/* header styles */
+
+header {
+    height: 60px;
+    background-color: #14597f;
+
+    border-bottom: 1px solid #0b2d3d;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.header--content {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 45px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav > a {
+    padding: 10px 20px;
+}
+
+nav > a:link, nav > a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #1fb5e9;
+    border-radius: 4px;
+}
+
+.fa-shopping-cart {
+    color: #14597f;
+}
+
+.count {
+    background-color: #d9534f;
+    padding: 5px 9px;
+    border-radius: 100px;
+    
+    position: relative;
+    left: -12pt;
+    top: 10pt;
+    
+    font-size: 12px;
+    color: white;
+}
+
+/* main styles */
+
+main {
+    margin-bottom: 50px;
+
+    flex: 1 0 auto;
+}
+
+main, .header--content, .contact--article {
+    width: 1160px;
+    max-width: 1160px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    display: flex;
+}
+
+.column {
+    width: 50%;
+}
+
+/* footer styles */
+
+footer {
+    height: 70px;
+    background-color: #eeeeee;
+
+    border-top: 1px solid #cccccc;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+
+    text-align: center;
+}
+
+/* buttons styles */
+
+/* TODO */
+
+/* form styles */
+
+/* TODO */
+
+/* index.html styles */
+
+.home--content {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.home--content > img {
+    height: 400px;
+}
+
+/* products.html styles */
+
+.products > aside {
+    width: 25%;
+    padding-right: 30px;
+}
+
+#product-list, .products--title, .products--items {
+    display: flex;
+}
+
+#product-list {
+    width: 75%;
+
+    flex-direction: column;
+}
+
+.products--title {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products--items {
+    flex-wrap: wrap;
+}
+
+.items {
+    flex: 1 0 25%;
+    margin: 15px;
+    height: 300px;
+}
+
+.items img {
+    height: 200px;
+}
+
+.items p {
+    text-align: right;
+}
+
+/* product.html styles */
+
+.product, .product--content, .product--form {
+    display: flex;
+}
+
+.product {
+    flex-direction: column;
+}
+
+.column > p {
+    text-align: justify;
+}
+
+.product--form {
+    border-top: 2px dotted lightgrey;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* contact.html styles */
+
+.contact--article, .contact--content {
+    display: flex;
+}
+
+.contact--article {
+    flex-direction: column;
+}
+
+.contact--column {
+    width: 33.33%;
+    
+    text-align: center;
+}
+
+/* shopping-cart.html styles */
+
+.shopping {
+    flex-direction: column;
+}
+
+.shopping--border {
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.column-delete {
+    width: 30px;
+}
+
+.column-product {
+    width: 40%;
+}
+
+.column-unit-price {
+    width: 25%;
+}
+
+.column-plus-minus {
+    width: 1%;
+}
+
+.column-quantity {
+    width: 5%;
+
+    text-align: center;
+}
+
+.column-product, .column-unit-price {
+    text-align: left;
+}
+
+.column-price, .shopping--total {
+    text-align: right;
+}
+
+.btn--reset-order {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* order.html styles */
+
+.order {
+    flex-direction: column;
+}
+
+.order--content, .order--pay {
+    display: flex;
+}
+
+.order--column {
+    padding-right: 10px;
+}
+
+.order--pay {
+    justify-content: end;
+}
+
+/* confirmation.html styles */
