@@ -359,6 +359,17 @@ footer {
     background-color: #bbbbbb;
 }
 
+.btn--reset-order > .btn {
+    padding-left: 3px;
+    padding-right: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: small;
+}
+
 /* order.html styles */
 
 .order {
