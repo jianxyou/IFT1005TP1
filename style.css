@@ -118,7 +118,7 @@ footer {
 
 /* buttons styles */
 
-.btn{
+.btn {
     background-color: #14597f;
     border: 1px solid #0b2d3d;
     border-radius: 4px;
@@ -131,7 +131,7 @@ footer {
     text-align:center;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #1fb5e9;
 }
 
@@ -188,7 +188,7 @@ footer {
 
 }
 
-.items:hover{
+.items:hover {
     background-color: #f3f3f3;
 }
 
@@ -200,7 +200,7 @@ footer {
     text-align: right;
 }
 
-.products--btn{
+.products--btn {
     border: 1px solid #999999;
     border-radius: 4px;
     width: 200px;
@@ -211,12 +211,12 @@ footer {
     background-color: white;
 }
 
-.products--btn:hover{
-    
+.products--btn:hover {
     background-color: #f3f3f3;
+    transition: ease-out 0.2s;
 }
 
-.selected{
+.selected {
     background-color: #ddf2fb;
 }
 
