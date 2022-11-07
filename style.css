@@ -122,8 +122,7 @@ footer {
     background-color: #14597f;
     border: 1px solid #0b2d3d;
     border-radius: 4px;
-    width: 100px;
-    height: 40px;
+    height: 35px;
     transition:ease-out 0.2s;
     cursor:pointer;
     color:white;
@@ -135,9 +134,21 @@ footer {
     background-color: #1fb5e9;
 }
 
+/* links styles */
+
+.links, .links:hover, .links:visited, .links:active {
+    text-decoration: none;
+    color: #1fb5e9;
+}
+
 /* form styles */
 
-/* TODO */
+.form-control{
+    border: 1px solid #999999;
+    border-radius: 4px;
+    width: 50px;
+    height: 30px;
+}
 
 /* index.html styles */
 
@@ -254,13 +265,6 @@ footer {
 
     justify-content: space-between;
     align-items: center;
-}
-
-.form-control{
-    border: 1px solid #999999;
-    border-radius: 4px;
-    width: 50px;
-    height: 30px;
 }
 
 /* contact.html styles */
