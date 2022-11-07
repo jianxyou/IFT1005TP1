@@ -343,14 +343,19 @@ footer {
     justify-content: space-between;
 }
 
-.btn--plus-minus{
+.btn--plus-minus {
+    padding: 3px;
+    width: 23px;
+
+    border: 1px solid #bbbbbb;
     border-radius: 50%;
-    font-weight: 900;
     background-color: #dddddd;
+
+    font-weight: 900;
     cursor: pointer;
 }
 
-.btn--plus-minus:hover{
+.btn--plus-minus:hover {
     background-color: #bbbbbb;
 }
 
