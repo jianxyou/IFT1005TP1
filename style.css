@@ -192,9 +192,8 @@ footer {
     text-decoration: none;
 }
 
-.items:hover {
+.items:hover, .products--btn:hover {
     background-color: #f3f3f3;
-
     transition: ease-out 0.2s;
 }
 
@@ -226,11 +225,6 @@ footer {
     cursor: pointer;
     text-align: left;
     background-color: white;
-}
-
-.products--btn:hover {
-    background-color: #f3f3f3;
-    transition: ease-out 0.2s;
 }
 
 .selected {
