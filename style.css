@@ -187,6 +187,13 @@ footer {
     border-radius: 4px;
 }
 
+.items, .products--btn {
+    border: 1px solid #999999;
+    border-radius: 4px;
+
+    transition: ease-out 0.2s;
+}
+
 .items:link, .items:visited, .items:hover, .items:active {
     color: black;
     text-decoration: none;
@@ -194,7 +201,6 @@ footer {
 
 .items:hover, .products--btn:hover {
     background-color: #f3f3f3;
-    transition: ease-out 0.2s;
 }
 
 .items h3 {
@@ -217,14 +223,12 @@ footer {
 }
 
 .products--btn {
-    border: 1px solid #999999;
-    border-radius: 4px;
     width: 200px;
     height: 30px;
-    transition: background-color 0.2s;
-    cursor: pointer;
-    text-align: left;
     background-color: white;
+    cursor: pointer;
+
+    text-align: left;
 }
 
 .selected {
