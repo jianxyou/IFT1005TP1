@@ -124,7 +124,7 @@ footer {
     border-radius: 4px;
     width: 100px;
     height: 40px;
-    transition: background-color 0.2s;
+    transition:ease-out 0.2s;
     cursor:pointer;
     color:white;
     text-decoration: none;
@@ -134,7 +134,6 @@ footer {
 .btn:hover{
     background-color: #1fb5e9;
 }
-/* TODO */
 
 /* form styles */
 
