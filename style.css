@@ -384,6 +384,10 @@ footer {
     padding-right: 10px;
 }
 
+.column > .form-control {
+    width: auto;
+}
+
 .order--pay {
     justify-content: end;
 }
