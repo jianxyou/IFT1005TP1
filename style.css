@@ -118,27 +118,37 @@ footer {
 
 /* buttons styles */
 
-.btn{
+.btn {
     background-color: #14597f;
     border: 1px solid #0b2d3d;
     border-radius: 4px;
-    width: 100px;
-    height: 40px;
-    transition: background-color 0.2s;
+    height: 35px;
+    transition:ease-out 0.2s;
     cursor:pointer;
     color:white;
     text-decoration: none;
     text-align:center;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #1fb5e9;
 }
-/* TODO */
+
+/* links styles */
+
+.links, .links:hover, .links:visited, .links:active {
+    text-decoration: none;
+    color: #1fb5e9;
+}
 
 /* form styles */
 
-/* TODO */
+.form-control{
+    border: 1px solid #999999;
+    border-radius: 4px;
+    width: 50px;
+    height: 30px;
+}
 
 /* index.html styles */
 
@@ -182,15 +192,35 @@ footer {
 .items {
     flex: 1 0 25%;
     margin: 15px;
+    padding-bottom: 15px;
     height: 300px;
     border: 1px solid #999999;
     border-radius: 4px;
-    transition: background-color 0.2s;
-
 }
 
-.items:hover{
+.items, .products--btn {
+    border: 1px solid #999999;
+    border-radius: 4px;
+
+    transition: ease-out 0.2s;
+}
+
+.items:link, .items:visited, .items:hover, .items:active {
+    color: black;
+    text-decoration: none;
+}
+
+.items:hover, .products--btn:hover {
     background-color: #f3f3f3;
+}
+
+.items h3 {
+    padding-left: 15px;
+    width: 215px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .items img {
@@ -198,26 +228,21 @@ footer {
 }
 
 .items p {
+    padding-right: 15px;
+
     text-align: right;
 }
 
-.products--btn{
-    border: 1px solid #999999;
-    border-radius: 4px;
+.products--btn {
     width: 200px;
     height: 30px;
-    transition: background-color 0.2s;
-    cursor: pointer;
-    text-align: left;
     background-color: white;
+    cursor: pointer;
+
+    text-align: left;
 }
 
-.products--btn:hover{
-    
-    background-color: #f3f3f3;
-}
-
-.selected{
+.selected {
     background-color: #ddf2fb;
 }
 
@@ -242,22 +267,13 @@ footer {
     align-items: center;
 }
 
-.form-control{
-    border: 1px solid #999999;
-    border-radius: 4px;
-    width: 50px;
-    height: 30px;
-}
-
 /* contact.html styles */
 
-.contact--article{
-
-}
 .contact--content {
+    border: 1px solid #999;
+    border-radius: 4px;
+    
     display: flex;
-    border: solid 1px #999;
-    border-radius: 4px/4px;
 }
 
 .contact--article {
@@ -327,15 +343,31 @@ footer {
     justify-content: space-between;
 }
 
-.btn--plus-minus{
+.btn--plus-minus {
+    padding: 3px;
+    width: 23px;
+
+    border: 1px solid #bbbbbb;
     border-radius: 50%;
-    font-weight: 900;
     background-color: #dddddd;
+
+    font-weight: 900;
     cursor: pointer;
 }
 
-.btn--plus-minus:hover{
+.btn--plus-minus:hover {
     background-color: #bbbbbb;
+}
+
+.btn--reset-order > .btn {
+    padding-left: 3px;
+    padding-right: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: small;
 }
 
 /* order.html styles */
@@ -350,6 +382,10 @@ footer {
 
 .order--column {
     padding-right: 10px;
+}
+
+.column > .form-control {
+    width: auto;
 }
 
 .order--pay {
