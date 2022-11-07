@@ -118,6 +118,22 @@ footer {
 
 /* buttons styles */
 
+.btn{
+    background-color: #14597f;
+    border: 1px solid #0b2d3d;
+    border-radius: 4px;
+    width: 100px;
+    height: 40px;
+    transition: background-color 0.2s;
+    cursor:pointer;
+    color:white;
+    text-decoration: none;
+    text-align:center;
+}
+
+.btn:hover{
+    background-color: #1fb5e9;
+}
 /* TODO */
 
 /* form styles */
@@ -167,6 +183,14 @@ footer {
     flex: 1 0 25%;
     margin: 15px;
     height: 300px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+
+}
+
+.items:hover{
+    background-color: #f3f3f3;
 }
 
 .items img {
@@ -175,6 +199,26 @@ footer {
 
 .items p {
     text-align: right;
+}
+
+.products--btn{
+    border: 1px solid #999999;
+    border-radius: 4px;
+    width: 200px;
+    height: 30px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    text-align: left;
+    background-color: white;
+}
+
+.products--btn:hover{
+    
+    background-color: #f3f3f3;
+}
+
+.selected{
+    background-color: #ddf2fb;
 }
 
 /* product.html styles */
@@ -198,10 +242,22 @@ footer {
     align-items: center;
 }
 
+.form-control{
+    border: 1px solid #999999;
+    border-radius: 4px;
+    width: 50px;
+    height: 30px;
+}
+
 /* contact.html styles */
 
-.contact--article, .contact--content {
+.contact--article{
+
+}
+.contact--content {
     display: flex;
+    border: solid 1px #999;
+    border-radius: 4px/4px;
 }
 
 .contact--article {
@@ -210,8 +266,19 @@ footer {
 
 .contact--column {
     width: 33.33%;
-    
     text-align: center;
+}
+
+.fa-mobile-alt{
+    font-size: 50px;
+}
+
+.fa-map-marker-alt{
+    font-size: 50px;
+}
+
+.fa-envelope{
+    font-size: 50px;
 }
 
 /* shopping-cart.html styles */
@@ -258,6 +325,17 @@ footer {
 .btn--reset-order {
     display: flex;
     justify-content: space-between;
+}
+
+.btn--plus-minus{
+    border-radius: 50%;
+    font-weight: 900;
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+.btn--plus-minus:hover{
+    background-color: #bbbbbb;
 }
 
 /* order.html styles */
