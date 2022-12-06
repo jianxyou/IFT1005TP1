@@ -1,7 +1,7 @@
 // Jianxin You 20134401
 // Hoang-Thi-Thi Cynthia Phan 20220019
 
-const main = document.querySelector('.products--items');
+const productList = document.querySelector('.products--items');
 const url = './data/products.json';
 
 onload = () => {
@@ -12,6 +12,7 @@ onload = () => {
     }
     xhr.open('GET', url);
     xhr.send();
+    $('.default').addClass('selected');
 }
 
 function loadProducts(products) {
@@ -25,5 +26,80 @@ function loadProducts(products) {
             </article>
         </a>`
     });
-    main.innerHTML = html;
+    productList.innerHTML = html;
 }
+
+function productCategories() {
+    $('#cameras').click(function() {
+        $('#cameras').addClass('selected');
+        $('#gaming').removeClass('selected');
+        $('#screens').removeClass('selected');
+        $('#computers').removeClass('selected');
+        $('#all-products').removeClass('selected');
+    })
+    
+    $('#gaming').click(function() {
+        $('#gaming').addClass('selected');
+        $('#cameras').removeClass('selected');
+        $('#screens').removeClass('selected');
+        $('#computers').removeClass('selected');
+        $('#all-products').removeClass('selected');
+    })
+    
+    $('#screens').click(function() {
+        $('#screens').addClass('selected');
+        $('#cameras').removeClass('selected');
+        $('#gaming').removeClass('selected');
+        $('#computers').removeClass('selected');
+        $('#all-products').removeClass('selected');
+    })
+    
+    $('#computers').click(function() {
+        $('#computers').addClass('selected');
+        $('#cameras').removeClass('selected');
+        $('#gaming').removeClass('selected');
+        $('#screens').removeClass('selected');
+        $('#all-products').removeClass('selected');
+    })
+    
+    $('#all-products').click(function() {
+        $('#all-products').addClass('selected');
+        $('#cameras').removeClass('selected');
+        $('#gaming').removeClass('selected');
+        $('#screens').removeClass('selected');
+        $('#computers').removeClass('selected');
+    })
+}
+
+function productCriteria() {
+    $('#price-low2high').click(function() {
+        $('#price-low2high').addClass('selected');
+        $('#price-high2low').removeClass('selected');
+        $('#name-A2Z').removeClass('selected');
+        $('#name-Z2A').removeClass('selected');
+    })
+
+    $('#price-high2low').click(function() {
+        $('#price-high2low').addClass('selected');
+        $('#price-low2high').removeClass('selected');
+        $('#name-A2Z').removeClass('selected');
+        $('#name-Z2A').removeClass('selected');
+    })
+
+    $('#name-A2Z').click(function() {
+        $('#name-A2Z').addClass('selected');
+        $('#price-low2high').removeClass('selected');
+        $('#price-high2low').removeClass('selected');
+        $('#name-Z2A').removeClass('selected');
+    })
+
+    $('#name-Z2A').click(function() {
+        $('#name-Z2A').addClass('selected');
+        $('#price-low2high').removeClass('selected');
+        $('#price-high2low').removeClass('selected');
+        $('#name-A2Z').removeClass('selected');
+    })
+}
+
+productCategories()
+productCriteria()
