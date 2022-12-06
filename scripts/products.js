@@ -32,14 +32,14 @@ function loadProducts(products) {
 function productCategories() {
     $('#cameras').click(function() {
         $('#cameras').addClass('selected');
-        $('#gaming').removeClass('selected');
+        $('#consoles').removeClass('selected');
         $('#screens').removeClass('selected');
         $('#computers').removeClass('selected');
         $('#all-products').removeClass('selected');
     })
     
-    $('#gaming').click(function() {
-        $('#gaming').addClass('selected');
+    $('#consoles').click(function() {
+        $('#consoles').addClass('selected');
         $('#cameras').removeClass('selected');
         $('#screens').removeClass('selected');
         $('#computers').removeClass('selected');
@@ -49,7 +49,7 @@ function productCategories() {
     $('#screens').click(function() {
         $('#screens').addClass('selected');
         $('#cameras').removeClass('selected');
-        $('#gaming').removeClass('selected');
+        $('#consoles').removeClass('selected');
         $('#computers').removeClass('selected');
         $('#all-products').removeClass('selected');
     })
@@ -57,7 +57,7 @@ function productCategories() {
     $('#computers').click(function() {
         $('#computers').addClass('selected');
         $('#cameras').removeClass('selected');
-        $('#gaming').removeClass('selected');
+        $('#consoles').removeClass('selected');
         $('#screens').removeClass('selected');
         $('#all-products').removeClass('selected');
     })
@@ -65,7 +65,7 @@ function productCategories() {
     $('#all-products').click(function() {
         $('#all-products').addClass('selected');
         $('#cameras').removeClass('selected');
-        $('#gaming').removeClass('selected');
+        $('#consoles').removeClass('selected');
         $('#screens').removeClass('selected');
         $('#computers').removeClass('selected');
     })
