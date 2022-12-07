@@ -8,10 +8,6 @@ const xhr = new XMLHttpRequest();
 let filterBy = 'allProducts';
 let orderBy = 'low2high';
 
-function productCount(number) {
-    $('#product-count').text(`${number} produits`);
-}
-
 function orderProducts(data) {
     switch(orderBy) {
         case 'low2high':
@@ -45,7 +41,7 @@ function load() {
         let ordered = orderProducts(filtered);
         let number = ordered.length;
         loadProducts(ordered);
-        productCount(number);
+        $('#product-count').text(`${number} produits`);
     }
     xhr.open('GET', url);
     xhr.send();
