@@ -36,45 +36,33 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
   </header>
 
   <main class="product">
-    <h1>Apple TV</h1>
+    <!-- The title "Page non trouvée!" will appear here. -->
+    <h1 id="product-name">
+      <!-- The product name will appear here. -->
+    </h1>
 
     <div class="product--content">
       <div class="column">
-        <img src="./imgs/apple-tv.png">
+        <!-- The image source will be added to the img tag. -->
+        <img id="product-image">
       </div>
 
       <div class="column">
         <h3>Description</h3>
-        <p>
-          L'Apple TV est un appareil conçu par Apple qui permet la communication sans fil entre un ordinateur et un téléviseur. 
-          Il est disponible depuis fin mars 2007 dans sa première version. 
-          L'appareil ressemble alors par sa forme à un Mac mini, bien qu'il ne fasse que la moitié de sa hauteur. 
-          Il communique par réseau sans fil ou Ethernet, avec un appareil iOS ou avec un ordinateur (sous Mac OS X ou sous Windows) par le biais du logiciel iTunes, permettant ainsi de diffuser le contenu vidéo et audio sur le téléviseur, via éventuellement un amplificateur audio-vidéo. 
-          (<a class="links" href='https://fr.wikipedia.org/wiki/Apple_TV' target='_blank'>Wikipédia</a>)
+        <p id="product-desc">
+          <!-- The product description will be added here. -->
         </p>
     
         <h3>Caractéristiques</h3>
-        <ul>
-          <li>
-            Processeur Apple A8
-          </li>
-          <li>
-            Mémoire vide de 2Go
-          </li>
-          <li>
-            Stockage de 32 ou 64 Go en mémoire flash
-          </li>
-          <li>
-            Connectivités: USB Type-C, HDMI, récepteur infrarouge
-          </li>
-          <li>
-            Réseau: Wi-Fi (802.11a/b/g/n/ac), 10/100 Ethernet, Bluetooth, AirPlay
-          </li>
+        <ul id="product-features">
+          <!-- The list of the product's features will appear here. -->
         </ul>
 
         <div class="product--form">
-          <p>Prix: <strong>249.99 $</strong></p>
-          <form action="" method="post">
+          <p id="product-price">
+            <!-- The product price will appear here. -->
+          </p>
+          <form id="add-to-cart-form" action="" method="post">
             <label for="product-quantity">Quantité:</label>
             <input id="product-quantity" class="form-control" type="number" name="quantity" min="1" max="99" step="1" value="1">
             <input class="btn" type="submit" value="Ajouter"></submit>
@@ -88,6 +76,8 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
     <small>Jianxin You 20134401</small>
     <small>Hoang-Thi-Thi Cynthia Phan 20220019</small>
   </footer>
+
+  <script type="text/javascript" src="./scripts/product.js"></script>
 </body>
 
 </html>
