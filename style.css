@@ -268,6 +268,26 @@ footer {
     align-items: center;
 }
 
+#dialog {
+    width: fit-content;
+    height: 15px;
+    padding: 15px;
+    border-style: none;
+    background-color: black;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 3px;
+
+    position: absolute;
+    bottom: 12%;
+
+    text-align: center;
+    color: white;
+}
+
+#dialog > p {
+    margin: 0px;
+}
+
 /* contact.html styles */
 
 .contact--content {
