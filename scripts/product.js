@@ -1,8 +1,10 @@
 // Jianxin You 20134401
 // Hoang-Thi-Thi Cynthia Phan 20220019
 
+const dialog = document.querySelector('#add-product');
 const url = './data/products.json';
 const xhr = new XMLHttpRequest();
+let id = getParameter('id');
 
 function getParameter(parameterName) {
     let parameters = new URLSearchParams(window.location.search);
@@ -20,7 +22,6 @@ function productFeatures(features) {
 function load() {
     xhr.onload = () => {
         let products = JSON.parse(xhr.responseText);
-        let id = getParameter('id');
         if (id > products.length) {
             $('.product').html('<h1>Page non trouvée!</h1>');
             console.log('hello');
@@ -36,5 +37,25 @@ function load() {
     xhr.open('GET', url);
     xhr.send();
 }
+
+$(document).ready(function() {
+    $(document).on('submit', '#add-to-cart-form', function() {
+        let quantity = document.querySelector('#product-quantity').value;
+        let productQuantity = {
+            id: id,
+            quantity: quantity
+        };
+        let serializedProductQuantity = JSON.stringify(productQuantity);
+        localStorage.setItem(`quantityID${id}`, serializedProductQuantity);
+        
+        return false;
+    });
+});
+
+dialog.addEventListener('click', () => {
+    $('#dialog').delay('fast').fadeIn();
+    $('#dialog').delay(5000);
+    $('#dialog').delay('fast').fadeOut();
+});
 
 load();
