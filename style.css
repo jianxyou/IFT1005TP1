@@ -66,6 +66,18 @@ nav > a:link, nav > a:visited {
     color: #14597f;
 }
 
+.no-count {
+    padding: 5px 9px;
+    border-radius: 100px;
+    
+    position: relative;
+    left: -12pt;
+    top: 10pt;
+    
+    font-size: 12px;
+    color: transparent;
+}
+
 .count {
     background-color: #d9534f;
     padding: 5px 9px;
