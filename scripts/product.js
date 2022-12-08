@@ -51,7 +51,6 @@ $(document).ready(function() {
 });
 
 dialog.addEventListener('click', () => {
-    // shoppingCartCount();
     $('#dialog').delay('fast').fadeIn();
     $('#dialog').delay(5000);
     $('#dialog').delay('fast').fadeOut();
