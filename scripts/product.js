@@ -46,6 +46,7 @@ $(document).ready(function() {
         };
         let serializedProductQuantity = JSON.stringify(productQuantity);
         localStorage.setItem(`quantityID${id}`, serializedProductQuantity);
+        showCount();
         return false;
     });
 });
