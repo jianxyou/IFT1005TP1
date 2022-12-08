@@ -24,7 +24,6 @@ function load() {
         let products = JSON.parse(xhr.responseText);
         if (id > products.length) {
             $('.product').html('<h1>Page non trouvée!</h1>');
-            console.log('hello');
         } else {
             let product = products[id - 1];
             $('#product-name').text(product.name);
