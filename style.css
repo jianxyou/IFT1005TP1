@@ -66,6 +66,18 @@ nav > a:link, nav > a:visited {
     color: #14597f;
 }
 
+.no-count {
+    padding: 5px 9px;
+    border-radius: 100px;
+    
+    position: relative;
+    left: -12pt;
+    top: 10pt;
+    
+    font-size: 12px;
+    color: transparent;
+}
+
 .count {
     background-color: #d9534f;
     padding: 5px 9px;
@@ -266,6 +278,26 @@ footer {
 
     justify-content: space-between;
     align-items: center;
+}
+
+#dialog {
+    width: fit-content;
+    height: 15px;
+    padding: 15px;
+    border-style: none;
+    background-color: black;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 3px;
+
+    position: absolute;
+    bottom: 12%;
+
+    text-align: center;
+    color: white;
+}
+
+#dialog > p {
+    margin: 0px;
 }
 
 /* contact.html styles */
