@@ -62,14 +62,18 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
           <p id="product-price">
             <!-- The product price will appear here. -->
           </p>
-          <form id="add-to-cart-form" action="" method="post">
+          <form id="add-to-cart-form">
             <label for="product-quantity">Quantité:</label>
-            <input id="product-quantity" class="form-control" type="number" name="quantity" min="1" max="99" step="1" value="1">
-            <input class="btn" type="submit" value="Ajouter"></submit>
+            <input id="product-quantity" class="form-control" type="number" name="quantity" min="1" value="1">
+            <input id="add-product" class="btn" type="submit" value="Ajouter"></input>
           </form>
         </div>
       </div>
     </div>
+
+    <dialog id="dialog">
+      <p>Le produit a été ajouté au panier.</p>
+    </dialog>
   </main>
   
   <footer>
