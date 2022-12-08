@@ -2,9 +2,11 @@
 // Hoang-Thi-Thi Cynthia Phan 20220019
 
 const dialog = document.querySelector('#add-product');
+const addProduct = document.querySelector('#add-product');
 const url = './data/products.json';
 const xhr = new XMLHttpRequest();
 let id = getParameter('id');
+let shoppingList = [];
 
 function getParameter(parameterName) {
     let parameters = new URLSearchParams(window.location.search);
@@ -37,6 +39,15 @@ function load() {
     xhr.send();
 }
 
+function shoppingCartCount() {
+    shoppingList = [];
+    for (let i = 0; i < localStorage.length; i++) {
+        shoppingList.push(localStorage.getItem(localStorage.key(i)));
+    }
+    console.log(shoppingList);
+    return shoppingList;
+}
+
 $(document).ready(function() {
     $(document).on('submit', '#add-to-cart-form', function() {
         let quantity = document.querySelector('#product-quantity').value;
@@ -46,12 +57,13 @@ $(document).ready(function() {
         };
         let serializedProductQuantity = JSON.stringify(productQuantity);
         localStorage.setItem(`quantityID${id}`, serializedProductQuantity);
-        
+        shoppingCartCount();
         return false;
     });
 });
 
 dialog.addEventListener('click', () => {
+    // shoppingCartCount();
     $('#dialog').delay('fast').fadeIn();
     $('#dialog').delay(5000);
     $('#dialog').delay('fast').fadeOut();
