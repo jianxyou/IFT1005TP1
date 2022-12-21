@@ -25,12 +25,13 @@ function numberOfProducts() {
 function showCount() {
     shoppingList = shoppingCartCount();
     let count = numberOfProducts();
-    let htmlEmptyCart = '<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-shopping-cart fa-stack-1x"></i></span><span class="no-count">#</span>';
-    let htmlShoppingCart = `<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-shopping-cart fa-stack-1x"></i></span><span class="count">${count}</span>`;
+    let htmlEmptyCart = '<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-shopping-cart fa-stack-1x"></i></span><span class="no-count"></span>';
+    let htmlShoppingCart = '<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x fa-inverse"></i><i class="fa fa-shopping-cart fa-stack-1x"></i></span><span class="count">count</span>';
     if (shoppingList == 0) {
         $('.shopping-cart').html(htmlEmptyCart);
     } else {
         $('.shopping-cart').html(htmlShoppingCart);
+        $('.count').html(count);
     }
 }
 
