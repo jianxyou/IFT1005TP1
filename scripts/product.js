@@ -38,11 +38,16 @@ function load() {
 }
 
 $(document).ready(function() {
-    $(document).on('submit', '#add-to-cart-form', function() {
+    $(document).on('click', '#add-product', function() {
         let quantity = document.querySelector('#product-quantity').value;
+        let price = document.getElementsByClassName("product-price")[0].innerHTML;
+        let name = document.getElementsByClassName("product-name")[0].innerHTML;
+        
         let productQuantity = {
             id: id,
-            quantity: quantity
+            quantity: quantity,
+            price : price,
+            name : name
         };
         let serializedProductQuantity = JSON.stringify(productQuantity);
         localStorage.setItem(`quantityID${id}`, serializedProductQuantity);
