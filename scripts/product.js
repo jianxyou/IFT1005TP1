@@ -5,9 +5,13 @@ const dialog = document.querySelector('#add-product');
 const url = './data/products.json';
 const xhr = new XMLHttpRequest();
 let id = getParameter('id');
+let number = id;
+
+console.log(number);
 
 function getParameter(parameterName) {
     let parameters = new URLSearchParams(window.location.search);
+    console.log(parameters);
     return parameters.get(parameterName);
 }
 
@@ -22,15 +26,18 @@ function productFeatures(features) {
 function load() {
     xhr.onload = () => {
         let products = JSON.parse(xhr.responseText);
-        if (id > products.length) {
+        console.log(id);
+        if (id === undefined || id < 1 || id > products.length) {
             $('.product').html('<h1>Page non trouvée!</h1>');
-        } else {
+          }else {
             let product = products[id - 1];
-            $('#product-name').text(product.name);
+            console.log('product:', product);
+            $('#product-name').html(product.name);
+            console.log(product.name);
             $('#product-image').attr('src', `./imgs/${product.image}`);
             $('#product-desc').html(product.description);
             $('#product-features').html(productFeatures(product.features));
-            $('#product-price').html(`Prix: <strong>${product.price}$</strong>`);
+            $('#product-price').html(`Prix: <strong>${product.price}</strong>`);
         }
     }
     xhr.open('GET', url);
@@ -38,19 +45,27 @@ function load() {
 }
 
 $(document).ready(function() {
-    $(document).on('click', '#add-product', function() {
+    $(document).on('click', '#add-product', function(event) {
+        event.preventDefault();
         let quantity = document.querySelector('#product-quantity').value;
-        let price = document.getElementsByClassName("product-price")[0].innerHTML;
-        let name = document.getElementsByClassName("product-name")[0].innerHTML;
-        
+        let price =  $('#product-price strong').text();
+        let name = document.getElementById("product-name").innerHTML;
+
+        let totalPrice = Number(price)*Number(quantity);
+
         let productQuantity = {
             id: id,
             quantity: quantity,
             price : price,
-            name : name
+            name : name,
+            totalPrice:totalPrice
+            
         };
+        
+        
         let serializedProductQuantity = JSON.stringify(productQuantity);
-        localStorage.setItem(`quantityID${id}`, serializedProductQuantity);
+
+        localStorage.setItem(name, serializedProductQuantity);
         showCount();
         return false;
     });
@@ -59,7 +74,7 @@ $(document).ready(function() {
 dialog.addEventListener('click', () => {
     $('#dialog').delay('fast').fadeIn();
     $('#dialog').delay(5000);
-    $('#dialog').delay('fast').fadeOut();
+ $('#dialog').delay('fast').fadeOut();
 });
 
 load();
