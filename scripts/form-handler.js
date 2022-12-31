@@ -2,8 +2,8 @@
 $.validator.addMethod("creditCardExpiry", function(value, element) {
     // Use a regular expression to check that the value is in the mm/yy format
     return this.optional(element) || /^\d{2}\/\d{2}$/.test(value);
-  }, "The expiry date of your credit card is invalid.");
-  
+  }, "La date d’expiration de votre carte de crédit est invalide.");
+   
   // Validate the form when it is submitted
   $("#order-form").validate({
     // Specify validation rules for each field

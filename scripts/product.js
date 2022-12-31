@@ -64,7 +64,6 @@ $(document).ready(function() {
         
         
         let serializedProductQuantity = JSON.stringify(productQuantity);
-
         localStorage.setItem(name, serializedProductQuantity);
         showCount();
         return false;
