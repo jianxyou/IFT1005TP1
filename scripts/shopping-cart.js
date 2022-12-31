@@ -135,37 +135,37 @@ showItems();
     });
 
 
-//     $('.btn--plus-minus[name="delete"]').click(function(event) {
-//     if (confirm('Do you want to delete the product from the basket?')) {
-//         let row = $(this).closest('tr');
-//         let name = row.find('.links').text();
-//         let priceText = row.find('.column-price');
-//         let priceForThisItem = parseInt(priceText.text());
+    $('.btn--plus-minus[name="delete"]').click(function(event) {
+    if (confirm('Do you want to delete the product from the basket?')) {
+        let row = $(this).closest('tr');
+        let name = row.find('.links').text();
+        let priceText = row.find('.column-price');
+        let priceForThisItem = parseInt(priceText.text());
 
-//         //console.log(name);
-//         row.remove();
-//         console.log(row);
-//         localStorage.removeItem(name);
-//         showCount();
+        //console.log(name);
+        row.remove();
+        console.log(row);
+        localStorage.removeItem(name);
+        showCount();
 
-//         if (shoppingList.length == 0){
-//             let shoppingBody = $('.shopping--content');
-//             shoppingBody.hide();
-//             document.querySelector('.empty-cart-message').style.display = 'block';
-//         }
+        if (shoppingList.length == 0){
+            let shoppingBody = $('.shopping--content');
+            shoppingBody.hide();
+            document.querySelector('.empty-cart-message').style.display = 'block';
+        }
 
-//         let totalElement = $('.shopping--total');
-//         let totalString = totalElement.find('strong').text();
-//         let total = parseFloat(totalString);
-//         let newTotal = total - priceForThisItem;
-//         totalElement.html('Total: <strong>' + newTotal + '$</strong>');
+        let totalElement = $('.shopping--total');
+        let totalString = totalElement.find('strong').text();
+        let total = parseFloat(totalString);
+        let newTotal = total - priceForThisItem;
+        totalElement.html('Total: <strong>' + newTotal + '$</strong>');
          
-//   // The user has confirmed the deletion of the item
-//     } else {
-//   // The user has cancelled the deletion of the item
-//     }
+  // The user has confirmed the deletion of the item
+    } else {
+  // The user has cancelled the deletion of the item
+    }
 
-//     });
+    });
 
 
     $('#reset').click(function(event) {
