@@ -51,10 +51,23 @@ Hoang-Thi-Thi Cynthia Phan 20220019 -->
           <div class="column order--column">
             <label for="first-name"><strong>Prénom</strong></label><br>
             <input class="form-control" id="first-name" name="firstName" minlenght='2' type="text" size="83" placeholder="Prénom" required><br><br>
+            <input type="hidden" name="formData" value='{"name": ""}'>
+            <script>
+              // Update the value of the hidden field when the form is submitted
+              const form = document.querySelector('form');
+              form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = document.querySelector('input[name="firstName"]').value;
+                localStorage.setItem('name', JSON.stringify({ name }));
+                form.submit();
+              });
+            </script>
             <span class="error"></span>
 
             <label for="email"><strong>Adresse courriel</strong></label><br>
             <input class="form-control" id="email" name="email" type="email" size="83" placeholder="nom@exemple.com" required><br><br>
+            
+            
             <span class="error"></span>
           </div>
     
