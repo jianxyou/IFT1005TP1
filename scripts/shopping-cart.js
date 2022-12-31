@@ -2,7 +2,7 @@
 // Hoang-Thi-Thi Cynthia Phan 20220019
 
 console.log("refresh");
-
+let count = numberOfProducts;
 function showItems() {
 
     console.log('haha');
@@ -13,13 +13,25 @@ function showItems() {
     let quantity;
     let totalprice;
     let name;
+    localStorage.setItem('confimation_id',JSON.stringify('00001'));
     if (shoppingList.length == 0){
         let shoppingBody = $('.shopping--content');
         shoppingBody.hide();
         document.querySelector('.empty-cart-message').style.display = 'block';
     }
-    else{
-
+    else{       
+    
+        shoppingList.sort(function(a, b) {
+            let idA = a.name.toUpperCase();
+            let idB = b.name.toUpperCase();
+            if (idA < idB) {
+              return -1;
+            }
+            if (idA > idB) {
+              return 1;
+            }
+            return 0;
+          });
     for (let i = 0; i < shoppingList.length; i++) {
        // html_for_one_item = '<tr><td><button class="btn--plus-minus" name="delete">X</button></td><td><a class="links" href="product.html">Apple TV</a></td><td class="price">2.00$</td><td><button class="btn--plus-minus" name="minus">-</button></td><td class="column-quantity">1</td><td><button class="btn--plus-minus" name="plus">+</button></td><td class="column-price">2.00$</td></tr>';
         name = shoppingList[i].name;
@@ -71,7 +83,14 @@ showItems();
         event.preventDefault();
 
         let itemRow = $(this).closest('tr');
-        
+        let name = itemRow.find('.links').text();
+        let productJsonString = localStorage.getItem(name);
+        let productJson = JSON.parse(productJsonString);
+        let quantity = parseInt(productJson.quantity);
+        quantity -= 1;
+        productJson.quantity = quantity;
+        localStorage.setItem(name,JSON.stringify(productJson));
+
 
         let quantityElement = itemRow.find('.column-quantity');
         let currentQuantity = parseInt(quantityElement.text());
@@ -95,11 +114,17 @@ showItems();
         let total = parseFloat(totalString);
         let newTotal = total - price;
         totalElement.html('Total: <strong>' + newTotal + '$</strong>');
+        
+        
+        showCount();
+
 
 
         if (newQuantity <= 1) {
             $(this).attr('disabled', true);
           }
+
+        
     });
     
 
@@ -108,6 +133,13 @@ showItems();
 
         let itemRow = $(this).closest('tr');
         let name = itemRow.find('.links').text();
+
+        let productJsonString = localStorage.getItem(name);
+        let productJson = JSON.parse(productJsonString);
+        let quantity = parseInt(productJson.quantity);
+        quantity += 1;
+        productJson.quantity = quantity;
+        localStorage.setItem(name,JSON.stringify(productJson));
 
         let quantityElement = itemRow.find('.column-quantity');
         let currentQuantity = parseInt(quantityElement.text());
@@ -132,11 +164,16 @@ showItems();
         let newTotal = total + price;
         totalElement.html('Total: <strong>' + newTotal + '$</strong>');
 
+        showCount();
+
+        if (newQuantity > 1) {
+            $('.btn--plus-minus[name="minus"]').attr('disabled', false);
+          }
     });
 
 
     $('.btn--plus-minus[name="delete"]').click(function(event) {
-    if (confirm('Do you want to delete the product from the basket?')) {
+    if (confirm('Voulez vous supprimer le produit du panier')) {
         let row = $(this).closest('tr');
         let name = row.find('.links').text();
         let priceText = row.find('.column-price');
@@ -171,9 +208,10 @@ showItems();
     $('#reset').click(function(event) {
         event.preventDefault();
         
-        if (confirm('Do you want to remove all products from the cart?')) {
+        if (confirm('Voulez vous supprimer le produit du panier')) {
           localStorage.clear();
           showItems();
+          showCount();
         }
     });
 
