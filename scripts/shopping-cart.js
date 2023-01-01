@@ -13,7 +13,7 @@ function showItems() {
     let quantity;
     let totalprice;
     let name;
-    localStorage.setItem('confimation_id',JSON.stringify('00001'));
+    
     if (shoppingList.length == 0){
         let shoppingBody = $('.shopping--content');
         shoppingBody.hide();
@@ -118,13 +118,9 @@ showItems();
         
         showCount();
 
-
-
         if (newQuantity <= 1) {
             $(this).attr('disabled', true);
           }
-
-        
     });
     
 
@@ -167,7 +163,8 @@ showItems();
         showCount();
 
         if (newQuantity > 1) {
-            $('.btn--plus-minus[name="minus"]').attr('disabled', false);
+            let button = itemRow.find('.btn--plus-minus[name="minus"]');
+            button.attr('disabled', false);
           }
     });
 
