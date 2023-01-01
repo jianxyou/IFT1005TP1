@@ -8,7 +8,7 @@ let totalProducts;
 function shoppingCartCount() {
     shoppingList = [];
     for (let i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i) != 'name' & localStorage.key(i) != 'confimation_id'){
+        if (localStorage.key(i) != 'name' & localStorage.key(i) != 'confirmation_id'){
             shoppingList.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
         }
         
