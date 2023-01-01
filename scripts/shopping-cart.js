@@ -47,7 +47,13 @@ function showItems() {
         html_for_one_item = '<tr><td><button class="btn--plus-minus" name="delete">X</button></td>';
         html_for_one_item += '<td><a class="links" href="product.html">' + name + '</a></td>';
         html_for_one_item += '<td class="price">' + price + '</td>';
-        html_for_one_item += '<td><button type="button" class="btn--plus-minus" name="minus">-</button></td><td class="column-quantity">';
+        if (quantity == 1){
+          html_for_one_item += '<td><button type="button" class="btn--plus-minus" name="minus" disabled>-</button></td><td class="column-quantity">';
+        }
+        else{
+          html_for_one_item += '<td><button type="button" class="btn--plus-minus" name="minus">-</button></td><td class="column-quantity">';
+        }
+        
         html_for_one_item += quantity + '</td><td><button class="btn--plus-minus" name="plus">+</button></td><td class="column-price">';
         html_for_one_item += totalprice + '</td></tr>';
 
