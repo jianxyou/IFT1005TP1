@@ -36,7 +36,8 @@ $.validator.addMethod("creditCardExpiry", function(value, element) {
 
     // Display error messages below each field
     errorPlacement: function(error, element) {
-      error.insertAfter(element);
+      element.after('<div></div>');
+      element.next().append(error);
     },
     // Submit the form if all fields are valid
     submitHandler: function(form) {
